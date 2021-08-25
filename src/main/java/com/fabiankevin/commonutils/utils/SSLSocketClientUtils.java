@@ -9,6 +9,7 @@ public class SSLSocketClientUtils {
         try {
             SSLContext sslContext = SSLContext.getInstance("SSL");
             sslContext.init(null, getTrustManager(), new SecureRandom());
+
             return sslContext.getSocketFactory();
         }
         catch (Exception e) {
