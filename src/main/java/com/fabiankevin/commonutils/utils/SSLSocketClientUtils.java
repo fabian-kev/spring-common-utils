@@ -39,13 +39,6 @@ public class SSLSocketClientUtils {
     }
 
     public static HostnameVerifier getHostnameVerifier() {
-        HostnameVerifier hostnameVerifier = new HostnameVerifier() {
-            @Override
-            public boolean verify(String s, SSLSession  sslSession)
-            {
-                return true;
-            }
-        };
-        return hostnameVerifier;
+        return (s, sslSession) -> true;
     }
 }
